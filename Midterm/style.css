@@ -1,0 +1,172 @@
+* {
+  font-family: poppins, sans-serif;
+}
+body {
+  background-color: #fbf8f6;
+}
+.container {
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+label {
+  font-weight: 550;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  gap: 10px;
+}
+.email {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.password {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.name input {
+  width: 250px;
+  box-sizing: border-box;
+}
+.name {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.firstname {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+h1 {
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+.lastname {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.emailpassword {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.technology {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-bottom: 0px;
+}
+
+.column1 {
+  display: flex;
+  flex-direction: column;
+  margin-right: 60px;
+  gap: 15px;
+}
+
+.column2 {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input {
+  box-sizing: border-box;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1.5px solid #ccc;
+  font-size: 16px;
+  color: #7f7f7f;
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+select {
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 250px;
+  color: #7f7f7f;
+  margin-bottom: 30px;
+}
+
+button {
+  margin-top: 30px;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #000000;
+  font-size: 16px;
+  color: white;
+  background-color: #1f1f21;
+}
+
+small {
+  color: #cc777b;
+  position: relative;
+  visibility: hidden;
+  margin-top: 0px;
+}
+
+.error small {
+  visibility: visible;
+}
+
+img {
+  visibility: hidden;
+}
+
+.error img {
+  visibility: visible;
+  position: absolute;
+}
+.tech error {
+  display: block;
+  color: #cc777b;
+  position: absolute;
+  margin-top: -10px;
+  margin-bottom: 0px;
+  visibility: hidden;
+  gap: 20px;
+}
+
+.tech.error img {
+  margin-right: 20px;
+}
+
+.tech.error small {
+  margin-left: 20px;
+}
+input:checked ~ .technology {
+  background-color: transparent;
+}
+
+.error input {
+  border: 2px solid #eaccc9;
+  box-shadow: 3px 4.1px 7px #eaccc9;
+}
