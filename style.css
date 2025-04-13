@@ -28,17 +28,13 @@ label {
   gap: 20px;
 }
 
-/*fixed in one place relative to its parent, reserves flex box layout unlike absolute, and creating its error is below it, creating kind of stacking flow */
 .email {
-  position: relative;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-/*fixed in one place relative to its parent, reserves flex box layout unlike absolute, and creating its error is below it, creating kind of stacking flow */
 .password {
-  position: relative;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -49,19 +45,15 @@ label {
   box-sizing: border-box;
 }
 
-/* it is relatived postiong so in the bigger parent div it does not disrupt the layout */
 .name {
   display: flex;
   flex-direction: row;
   gap: 25px;
   justify-content: space-between;
   margin-top: 20px;
-  position: relative;
 }
 
-/*fixed in one place relative to its parent, reserves flex box layout unlike absolute, and creating its error is below it, creating kind of stacking flow */
 .firstname {
-  position: relative;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -72,9 +64,7 @@ h1 {
   margin-top: 0px;
 }
 
-/*fixed in one place relative to its parent, reserves flex box layout unlike absolute, and creating its error is below it, creating kind of stacking flow */
 .lastname {
-  position: relative;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -147,10 +137,9 @@ button {
   background-color: #1f1f21;
 }
 
-/* error's color and position being positioned relative to its parent so it doesnt move and float and disrupt the whole flow, margin 0px so it is close class it is displayed error to */
+/* error message for name, email and password */
 small {
   color: #cc777b;
-  position: relative;
   visibility: hidden;
   margin-top: 0px;
 }
@@ -168,17 +157,6 @@ img {
 /* if we have error in technlogoies show the image triangle error */
 .error img {
   visibility: visible;
-  position: absolute;
-}
-
-/* tech - triangle error imagine margin 20px to the right so image and text error wont overlap */
-.tech.error img {
-  margin-right: 20px;
-}
-
-/*tech - error message  margin 20px from the left so it wont overlap with the image*/
-.tech.error small {
-  margin-left: 20px;
 }
 
 /* when there is an error in some class, input for that class will have red border */
