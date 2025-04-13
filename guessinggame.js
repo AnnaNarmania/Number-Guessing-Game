@@ -42,7 +42,7 @@ submit.addEventListener("click", () => {
     }
     
     errorTxt.style.display="none";
-    // at every click of the guess if attempt < 10 then checks if user guessed coreectly and during uncorrect answer gives a hint
+    // at every click of the guess if attempt < 10 then checks if user guessed correctly and during uncorrect answer gives a hint
    if  (attempts < 10) {
     let result ="";
     hint.style.display = "block";
