@@ -37,7 +37,7 @@ p {
   line-height: 100%;
 }
 /* for too low too high */
-#containerr h1 {
+ h1 {
   color: #af2d2d;
   font-weight: 700;
   font-size: 40px;

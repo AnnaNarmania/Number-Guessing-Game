@@ -64,6 +64,10 @@ h1 {
   margin-top: 0px;
 }
 
+.container h1{
+  color: #000000;
+}
+
 .lastname {
   display: flex;
   flex-direction: column;
