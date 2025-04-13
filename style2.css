@@ -1,22 +1,23 @@
-* {
+/* font for game part */
+#containerr {
   font-family: "Inter", sans-serif;
 }
-body {
-  background-color: #d9d9d9;
-}
-#container {
+
+/* initiallly hidden so only form registration is visible, after form validation its visibility is set to visible and height to 10vh so it takes up the whole screen, background color also changed */
+#containerr {
+  visibility: hidden;
   border-radius: 10px;
   display: flex;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
-  height: 100vh;
-  
- 
+  height: 0;
+  background-color: #d9d9d9;
 }
 #inner_container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 600px;
   height: 95%;
   gap: 20px;
@@ -36,7 +37,7 @@ p {
   line-height: 100%;
 }
 /* for too low too high */
-h1 {
+#containerr h1 {
   color: #af2d2d;
   font-weight: 700;
   font-size: 40px;
@@ -83,23 +84,19 @@ label[for="guess_input"] {
   border: none;
 }
 .btn:hover {
-  background-color: #9f1f27 ;
+  background-color: #9f1f27;
   color: #fff;
- 
 }
-
 
 .guess_history h1 {
   color: #247527;
   font-weight: 600;
   font-size: 39px;
 }
-.guess_history ul{
+.guess_history ul {
   column-gap: 60px;
   margin: 0;
 }
-
-
 
 /* list element styling */
 .guess_history li {
@@ -108,12 +105,11 @@ label[for="guess_input"] {
   font-size: 24px;
   letter-spacing: 0;
   list-style-type: disc;
-  white-space: nowrap;  /*-keeps the element in one line*/
+  white-space: nowrap; /*-keeps the element in one line*/
 }
 
-.guess_history span{
- color:#005EFF;
- 
+.guess_history span {
+  color: #005eff;
 }
 .score_attempts {
   position: absolute;
@@ -122,12 +118,10 @@ label[for="guess_input"] {
   display: flex;
   flex-direction: column;
   gap: 5px;
- 
 }
 .score_attempts h1 {
   color: black;
   font-size: 33px;
   font-weight: 600;
   margin: 3px;
- 
 }

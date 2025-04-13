@@ -11,16 +11,32 @@
       rel="stylesheet"
       href="style.css"
     />
-    <script src="formvalidation.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="style2.css"
+    />
+    <!-- using defer so javascript loads after html is done parsing -->
+    <script
+      src="formvalidation.js"
+      defer
+    ></script>
+    <script
+      src="guessinggame.js"
+      defer
+    ></script>
   </head>
   <body>
-    <div class="container" id="container">
+    <div
+      class="container"
+      id="container"
+    >
       <div class="form">
         <h1>Group Form</h1>
         <form
           class="form"
           id="id-form"
         >
+          <!-- first name and last name in same div so we can have them in row, instead of column -->
           <div class="name">
             <div class="firstname">
               <label for="first-name">First Name</label>
@@ -30,6 +46,8 @@
                 name="first-name"
                 placeholder="First Name"
               />
+
+              <!-- error for first name will be displayed here, below input field -->
               <small></small>
             </div>
             <div class="lastname">
@@ -40,10 +58,13 @@
                 name="last-name"
                 placeholder="Last Name"
               />
+
+              <!-- error for last name will be displayed here, below input field -->
               <small></small>
             </div>
           </div>
 
+          <!-- email and password in the same  -->
           <div class="emailpassword">
             <div class="email">
               <label for="email">Email</label>
@@ -53,6 +74,7 @@
                 name="email"
                 placeholder="you@company.com"
               />
+              <!-- error for mail -->
               <small></small>
             </div>
             <div class="password">
@@ -63,9 +85,12 @@
                 name="password"
                 placeholder="Password"
               />
+              <!-- error for password -->
               <small></small>
             </div>
           </div>
+
+          <!-- team size using dropdown select option -->
           <div class="team">
             <label for="teamsize">Team Size</label>
             <select
@@ -80,6 +105,7 @@
 
           <label for="tech">Technologies</label>
 
+          <!-- technologies in one big div to have them in rows and then in two separate to have columns in each row side by side -->
           <div class="technology">
             <div class="column1">
               <label><input type="checkbox" />Html</label>
@@ -93,10 +119,20 @@
             </div>
             <small></small>
           </div>
+
+          <!-- this class separately for errors for techs, so we can display error below tech and not have the error in row -->
           <div class="tech">
-            <img src="triangle.png" alt="error sign" width="14px">
+            <!-- error triangle photo -->
+            <img
+              src="triangle.png"
+              alt="error sign"
+              width="14px"
+            />
+            <!-- error text -->
             <small></small>
           </div>
+
+          <!-- submit button -->
           <button
             class="submit"
             type="submit"
@@ -105,6 +141,55 @@
             Submit
           </button>
         </form>
+      </div>
+    </div>
+
+    <div
+      id="containerr"
+      class="containerr"
+    >
+      <div id="inner_container">
+        <h2>Guess the Number!</h2>
+        <p>I'm thinking of a number between 1 and 100.</p>
+        <h1 id="hint"></h1>
+        <input
+          type="number"
+          name=""
+          id="guess_input"
+          placeholder="Enter your guess"
+          class="no-spinners"
+        />
+        <label
+          for="guess_input"
+          id="errorTxt"
+          >Please enter a number between 1 and 100!</label
+        >
+
+        <div class="btns">
+          <button
+            class="btn"
+            id="submit_btn"
+          >
+            Guess
+          </button>
+          <button
+            class="btn"
+            id="restart_btn"
+          >
+            Restart
+          </button>
+        </div>
+        <div
+          class="guess_history"
+          id="guessHistory"
+        >
+          <h1>Guess History</h1>
+          <ul id="guessList"></ul>
+        </div>
+      </div>
+      <div class="score_attempts">
+        <h1 id="score"></h1>
+        <h1 id="attempts"></h1>
       </div>
     </div>
   </body>
