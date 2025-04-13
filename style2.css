@@ -92,6 +92,7 @@ label[for="guess_input"] {
   color: #247527;
   font-weight: 600;
   font-size: 39px;
+  margin-bottom: 8vh;
 }
 .guess_history ul {
   column-gap: 60px;

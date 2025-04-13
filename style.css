@@ -111,7 +111,11 @@ input {
   border: 1.5px solid #ccc;
   font-size: 16px;
   color: #7f7f7f;
+  accent-color: #ddd;
 }
+
+
+
 
 .team {
   display: flex;
@@ -128,6 +132,13 @@ select {
   width: 250px;
   color: #7f7f7f;
   margin-bottom: 30px;
+  /*make the initial select icon dissapear */
+  appearance: none;
+  background: url(Expand\ Arrow.png) no-repeat;
+  background-color: white;
+  background-position: right 0.75em center;;
+ 
+ 
 }
 
 /* details for button */
