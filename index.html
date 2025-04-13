@@ -154,7 +154,9 @@
       <div id="inner_container">
         <h2>Guess the Number!</h2>
         <p>I'm thinking of a number between 1 and 100.</p>
-        <h1 id="hint"></h1>
+
+        <!-- hint will be displayed here if the number is too low and too high -->
+        <h1 id="hint"></h1> 
         <input
           type="number"
           name=""
@@ -162,12 +164,15 @@
           placeholder="Enter your guess"
           class="no-spinners"
         />
+
+        <!-- displayed where ther is a empty input -->
         <label
           for="guess_input"
           id="errorTxt"
           >Please enter a number between 1 and 100!</label
         >
-
+        
+        <!-- for entering our guess -->
         <div class="btns">
           <button
             class="btn"
@@ -175,6 +180,8 @@
           >
             Guess
           </button>
+
+          <!-- for deleting our previous guess historys, scores and attempts -->
           <button
             class="btn"
             id="restart_btn"
@@ -185,11 +192,13 @@
         <div
           class="guess_history"
           id="guessHistory"
-        >
+        > 
+        <!-- from the javascript file, in this section all the guess history is created -->
           <h1>Guess History</h1>
           <ul id="guessList"></ul>
         </div>
       </div>
+      <!-- from the javascript file, we control the scores and attempt number for the user -->
       <div class="score_attempts">
         <h1 id="score"></h1>
         <h1 id="attempts"></h1>
