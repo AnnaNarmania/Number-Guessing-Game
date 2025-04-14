@@ -31,7 +31,7 @@ function gamestart() {
 submit.addEventListener("click", () => {
   const userValue = Number(guess.value);
   // checking if input value is empty  or number out of range
-  if (!userValue || userValue < 1 || userValue > 100) {
+  if (!userValue || userValue < 1 || userValue > 100 || !(Number.isInteger(userValue))) {
     errorTxt.style.display = "block";
     guess.value = "";
     return;
@@ -70,19 +70,19 @@ submit.addEventListener("click", () => {
     newRec.classList.add("guess_history"); // adds styling
     guessList.appendChild(newRec); //created element becomes the  element of teh new list
 
+    // case when we did not guess at 10-th attempt  we can not write another input- guess.disabled
+    if (attempts === 10 && result !== "Correct") {
+      guess.disabled = true;
+      hint.textContent = "💥 Game Over!";
+    }
+
     // for better visual puts history into two columns
     if (guessList.children.length >= 5) {
       guessList.style.columnCount = 2;
     } else {
       guessList.style.columnCount = 1;
     }
-  }
 
-  // case when we did not guess at 10-th attempt  we can not write another input- guess.disabled
-  else {
-    guess.value = "";
-    guess.disabled = true;
-    hint.textContent = "💥 Game Over!";
   }
 });
 
